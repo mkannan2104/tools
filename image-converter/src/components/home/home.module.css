@@ -1,0 +1,166 @@
+.hero {
+  padding: 2.25rem 0 1.75rem;
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 40rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.65rem;
+  color: var(--color-text);
+}
+
+.lead {
+  font-size: clamp(1.05rem, 2vw, 1.15rem);
+  color: var(--color-text-secondary);
+  margin-bottom: 0.4rem;
+  line-height: 1.45;
+}
+
+.support {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  max-width: 42ch;
+  margin: 0 auto 1.25rem;
+}
+
+.search {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: min(100%, 20rem);
+  padding: 0 0.85rem;
+  height: 2.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-background);
+  color: var(--color-text-muted);
+}
+
+.search:focus-within {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.toolsSection {
+  padding: 1.5rem 0 2.5rem;
+}
+
+.sectionTitle {
+  font-size: clamp(1.2rem, 2.2vw, 1.4rem);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.15rem;
+}
+
+.toolGrid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: 1fr;
+}
+
+.toolGrid :global(.tool-card) {
+  height: 100%;
+}
+
+.toolGrid :global(.tool-card:hover) {
+  border-color: var(--color-primary);
+}
+
+.toolGrid :global(.tool-card:focus-visible) {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.toolWide {
+  grid-column: 1 / -1;
+}
+
+.empty {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.whySection,
+.aboutSection {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.whyLine {
+  margin: 0 0 0.85rem;
+  color: var(--color-text);
+  font-size: 0.98rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.whyList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-width: 54ch;
+}
+
+.whyList li {
+  color: var(--color-text-secondary);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.whyList strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.aboutSection p {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--color-text-secondary);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    padding: 2.75rem 0 2rem;
+  }
+
+  .toolsSection {
+    padding: 1.75rem 0 3rem;
+  }
+
+  .toolGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .whySection,
+  .aboutSection {
+    padding: 1.75rem 0;
+  }
+}
