@@ -9,6 +9,8 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://imageconverter.cloud",
   googleAnalyticsId:
     process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-BHJEBZ46ET",
+  googleAdSenseClient:
+    process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID ?? "ca-pub-8628576985544741",
   year: new Date().getFullYear(),
   developer: "Mugesh Kannan",
   email: "ops.devsupport@gmail.com",
