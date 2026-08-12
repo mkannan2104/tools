@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
  * Call `requestScroll()` right before updating result state.
  */
 export function useScrollToResults(active: boolean) {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [scrollToken, setScrollToken] = useState(0);
 
   useEffect(() => {
