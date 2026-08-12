@@ -112,6 +112,15 @@ export default function RootLayout({
             </Script>
           </>
         ) : null}
+        {siteConfig.adsenseClient ? (
+          <Script
+            id="google-adsense"
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adsenseClient}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        ) : null}
         <Header />
         <main>{children}</main>
         <Footer />
