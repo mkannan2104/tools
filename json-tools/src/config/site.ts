@@ -12,4 +12,5 @@ export const siteConfig = {
   developer: "Mugesh Kannan",
   email: "ops.devsupport@gmail.com",
   license: "MIT",
+  analyticsId: process.env.NEXT_PUBLIC_GA_ID ?? "G-6XCH9M72RL",
 } as const;
