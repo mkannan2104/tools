@@ -13,4 +13,6 @@ export const siteConfig = {
   email: "ops.devsupport@gmail.com",
   license: "MIT",
   analyticsId: process.env.NEXT_PUBLIC_GA_ID ?? "G-6XCH9M72RL",
+  adsenseClient:
+    process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "ca-pub-8628576985544741",
 } as const;
