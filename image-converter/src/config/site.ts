@@ -7,6 +7,8 @@ export const siteConfig = {
   tagline: "Simple image tools that run in your browser.",
   supportingText: "No upload. No account.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://imageconverter.cloud",
+  googleAnalyticsId:
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-BHJEBZ46ET",
   year: new Date().getFullYear(),
   developer: "Mugesh Kannan",
   email: "ops.devsupport@gmail.com",
