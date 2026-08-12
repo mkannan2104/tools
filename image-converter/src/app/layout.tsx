@@ -6,7 +6,6 @@ import { Header } from "@/components/layout/Header";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
-
 const consentBootstrap = `
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -112,6 +111,15 @@ export default function RootLayout({
               `}
             </Script>
           </>
+        ) : null}
+        {siteConfig.googleAdSenseClient ? (
+          <Script
+            id="google-adsense"
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.googleAdSenseClient}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
         ) : null}
         <Header />
         <main>{children}</main>
