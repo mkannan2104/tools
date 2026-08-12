@@ -98,6 +98,20 @@ export default function RootLayout({
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: consentBootstrap }}
         />
+        {siteConfig.analyticsId ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.analyticsId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics-config" strategy="afterInteractive">
+              {`
+                gtag('js', new Date());
+                gtag('config', '${siteConfig.analyticsId}');
+              `}
+            </Script>
+          </>
+        ) : null}
         <Header />
         <main>{children}</main>
         <Footer />
